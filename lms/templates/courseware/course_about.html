@@ -97,9 +97,7 @@ from openedx.core.lib.courses import course_image_url
           %endif
 
         % elif is_course_full:
-          <span class="register disabled">
-            ${_("Course is full")}
-          </span>
+          <span class="register disabled">${_("Course is full")}</span>
         % elif invitation_only and not can_enroll:
           <span class="register disabled">${_("Enrollment in this course is by invitation only")}</span>
         ## Shib courses need the enrollment button to be displayed even when can_enroll is False,
@@ -124,9 +122,7 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="${href_class}">
-            ${_("Enroll Now")}
-          </a>
+          <a href="${reg_href}" class="${href_class}">${_("Enroll Now")}</a>
           <div id="register_error"></div>
         %endif
         </div>
