@@ -1,0 +1,17 @@
+<h1>${settings.PLATFORM_NAME}</h1>
+<p id="overlay-text">The place for all your online learning</p>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const htmlElement = document.documentElement;
+
+        // Get the value of the lang attribute
+        const langAttribute = htmlElement.getAttribute('lang');
+
+        if (langAttribute === 'ja-jp') {
+            overlayText = document.getElementById('overlay-text').innerHTML = "オンライン学習のすべてがここに";
+            const placeholderText = document.querySelector('.search-input');
+            placeholderText.placeholder = 'コースを検索する';
+        }
+    })
+</script>
+    
